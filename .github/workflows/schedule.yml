@@ -6,13 +6,12 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: schedue
+name: schedule  
 
 on:
   schedule:
-    - cron: "*/3 * * * *"
-  workflow_dispatch:        # Optional: allows manual trigger  
-    
+    - cron: "*/3 * * * *"      # Runs every 3 minutes (UTC)
+  workflow_dispatch:           # Allows manual trigger from GitHub UI
 
 jobs:
   say-hello:

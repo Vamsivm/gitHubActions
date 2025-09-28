@@ -11,6 +11,7 @@ name: schedue
 on:
   schedule:
     - cron: "*/3 * * * *"
+  workflow_dispatch:        # Optional: allows manual trigger  
     
 
 jobs:

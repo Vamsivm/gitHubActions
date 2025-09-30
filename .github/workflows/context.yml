@@ -15,6 +15,6 @@ jobs:
         env: 
           GITHUB_CONTEXT_ACTOR: $${{github.actor}}
         run: |
-          echo "Hello $GITHUB_CONTEXT_ACTOR"
+          echo "Hello ${{github.actor}}
 
  

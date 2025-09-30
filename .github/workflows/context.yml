@@ -1,0 +1,20 @@
+
+name: Context workflow
+
+on:
+  push:
+    branches: ["main"]
+    
+
+jobs:
+  
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print github context
+        env: 
+          GITHUB_CONTEXT_ACTOR: $${{github.actor}}
+        run: |
+          echo "Hello $GITHUB_CONTEXT_ACTOR"
+
+ 

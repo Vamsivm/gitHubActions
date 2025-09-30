@@ -3,6 +3,8 @@ name: Webhook workflow
 
 on:
   repository_dispatch:
+    types:
+      - webhook
     
 
 

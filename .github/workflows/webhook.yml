@@ -1,0 +1,18 @@
+
+name: Webhook workflow
+
+on:
+  repository_dispatch:
+    
+
+
+jobs:
+  print_event_type:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print event type
+        run: echo "Event type triggered ${{github.event.action}}"
+
+    

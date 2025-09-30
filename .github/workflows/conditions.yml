@@ -1,0 +1,28 @@
+
+name: Condition workflow
+
+on:
+  push:
+    branches: ["main"]
+    
+
+jobs:
+  conditional_greeting:
+    if: github.repository == 'Vamsivm/gitHubActions'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Greeting
+        run: |
+          OWNER=${GITHUB_REPOSITORY%%/*}
+          echo "Hello $OWNER"
+
+  else_greeting:
+    if: github.repository != 'Vamsivm/gitHubActions'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Else greeting
+        run: echo "Hello unknown"   
+
+    
